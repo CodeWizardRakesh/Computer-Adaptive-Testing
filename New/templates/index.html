@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Simulation</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Test Simulation</h1>
+        <p id="difficulty-label">Difficulty Level: Medium</p>
+        <p>Question: What is 2 + 2?</p>
+        <form id="quiz-form">
+            <input type="radio" name="answer" value="3"> 3<br>
+            <input type="radio" name="answer" value="4"> 4<br>
+            <input type="radio" name="answer" value="5"> 5<br>
+            <button type="button" onclick="startTest()">Start Test</button>
+            <button type="button" onclick="submitTest()">Submit</button>
+        </form>
+        <p id="result"></p>
+    </div>
+    <script src="../static/script.js"></script>
+</body>
+</html>

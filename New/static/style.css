@@ -1,0 +1,22 @@
+
+body {
+    background-color: #1e1e2e;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.container {
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #3b3b58;
+    border-radius: 10px;
+    width: 50%;
+}
+button {
+    background-color: purple;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+}

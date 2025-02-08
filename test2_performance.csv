@@ -1,2 +1,9 @@
 User_ID,Topic,Correct,Time_Spent,Attempts,Difficulty_Test1,Suggested_Difficulty_Test2
-U1,T1,0,56,1,1,Hard
+U1,T1,1,16,4,1,Hard
+U1,T1,1,2.037,1,1,Hard
+U1,T1,0,14.383,1,1,Hard
+U1,T1,1,12.197,1,1,Hard
+U1,T1,0,2.706,1,1,Hard
+U1,T1,0,142.34,1,1,Easy
+U1,T1,0,144.715,1,1,Easy
+U1,T1,0,153.84,1,1,Easy
