@@ -1,7 +1,17 @@
 import joblib
 import numpy as np
-from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder, StandardScaler
+from sklearn.ensemble import RandomForestClassifier
+
+# Example data for fitting (replace with your actual data)
+X_fit = np.array([
+    [1, 1, 10, 2, 0.9],
+    [2, 2, 20, 3, 0.8],
+    [3, 3, 30, 4, 0.7],
+    [4, 1, 40, 5, 0.6]
+])
+y_diff = ['easy', 'medium', 'hard', 'easy']
+y_topic = ['math', 'science', 'history', 'math']
 
 # Define and fit the model and encoders
 model = RandomForestClassifier(n_estimators=100, random_state=42)
@@ -9,15 +19,13 @@ scaler = StandardScaler()
 le_diff = LabelEncoder()
 le_topic = LabelEncoder()
 
-# Example data (replace with your actual data)
-X = [[1, 2], [3, 4], [5, 6]]
-y_diff = ['easy', 'medium', 'hard']
-y_topic = ['math', 'science', 'history']
-
-# Fit the scaler and encoders
-scaler.fit(X)
+# Fit the scaler and encoders with the example data
+scaler.fit(X_fit)
 le_diff.fit(y_diff)
 le_topic.fit(y_topic)
+
+# Fit the model
+model.fit(X_fit, le_diff.transform(y_diff))
 
 # Save artifacts
 joblib.dump(model, "Model/difficulty_predictor.pkl")
@@ -47,7 +55,7 @@ def suggest_difficulty(topic, current_diff, avg_time, avg_attempts, success_rate
 # Example usage
 print(suggest_difficulty(
     topic='math', 
-    current_diff='easy', 
+    current_diff='hard', 
     avg_time=45, 
     avg_attempts=3, 
     success_rate=0.8
